@@ -1,0 +1,35 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<section id="line-slider">
+ <div class="leoslider">
+
+
+  <ul class="slides">
+   <li>
+    <img src="images/1.jpg" alt=" " />
+   </li>
+   <li>
+    <img src="images/2.jpg" alt=" " />
+   </li>
+   <li>
+    <img src="images/3.jpg" alt=" " />
+   </li>
+  </ul>
+ </div>
+</section>
+<div class="slideShow">
+ <ul class="slides">
+  <!-- {foreach from=$show_list name=show item=show} -->
+  <li><a href="{$show.show_link}" target="_blank" style="background-image:url({$show.show_img})"></a></li>
+  <!-- {/foreach} -->
+ </ul>
+</div>
+<script type="text/javascript">
+{literal}
+$(document).ready(function(){
+ $('.slides').bxSlider({
+   mode: 'fade'
+ });
+})
+{/literal}
+</script>
